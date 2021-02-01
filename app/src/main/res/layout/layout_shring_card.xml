@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <FrameLayout
+            android:id="@+id/frame_cover"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cover_height"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cover_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/image"
+                android:scaleType="fitXY"
+                android:layout_gravity="center"
+                />
+            <RelativeLayout
+                android:id="@+id/layout_reveal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:background="@color/social_color">
+                    <LinearLayout
+                        android:id="@+id/layout_btns"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_centerInParent="true">
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/social_btn_1"
+                                android:text="@string/social_btn_text1"
+                                style="@style/social_btn_style"
+                                />
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/social_btn_2"
+                            android:text="@string/social_btn_text2"
+                            style="@style/social_btn_style"
+                            />
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/social_btn_3"
+                            android:text="@string/social_btn_text3"
+                            style="@style/social_btn_style"
+                            />
+
+
+                    </LinearLayout>
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_profile"
+            android:layout_width="@dimen/profile_image_width_height"
+            android:layout_height="@dimen/profile_image_width_height"
+            app:srcCompat="@drawable/profile_image"
+            android:layout_alignBottom="@id/frame_cover"
+            android:layout_alignLeft="@id/frame_cover"
+            android:layout_marginLeft="@dimen/profile_image_margin_left"
+            android:layout_marginBottom="@dimen/profile_image_margin_bottom"
+            />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/social_icon"
+            android:layout_width="@dimen/social_icon_width_height"
+            android:layout_height="@dimen/social_icon_width_height"
+            app:srcCompat="@drawable/sent_message_icon"
+            android:padding="@dimen/social_icon_padding"
+            android:layout_alignRight="@id/frame_cover"
+            android:layout_alignBottom="@id/frame_cover"
+            android:layout_marginRight="@dimen/social_icon_margin_right"
+            android:layout_marginBottom="@dimen/social_icon_margin_bottom"
+            android:background="@drawable/social_icon_normal_bg"
+            android:scaleType="fitCenter"
+            />
+        <Space
+            android:id="@+id/space"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_height"
+            android:layout_below="@id/frame_cover"
+            />
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/space"
+            android:text="@string/content"
+            android:layout_margin="10dp"
+            android:textColor="@android:color/secondary_text_light"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:gravity="left"
+
+            />
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Friday 12 FEB."
+            android:textStyle="bold|italic"
+            android:textColor="#a1a1a1"
+            android:layout_below="@id/content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="4dp"
+            />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

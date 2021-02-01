@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SharingCard</string>
+
+    <string name="content">Hi! My name is Ali Mostaghimi.I am an android developer.I love Programming, Football and Music. </string>
+
+    <string name="social_btn_text1">View Profile</string>
+    <string name="social_btn_text2">Share</string>
+    <string name="social_btn_text3">Send Message</string>
+</resources>
